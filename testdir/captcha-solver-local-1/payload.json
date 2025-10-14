@@ -1,0 +1,21 @@
+{
+  "email": "student@example.com",
+  "secret": "mysecret",
+  "task": "captcha-solver-local-1",
+  "round": 1,
+  "nonce": "ab12-345",
+  "brief": "Create a captcha solver that handles ?url=http://localhost:5001/files/sample.png. Default to attached sample.",
+  "checks": [
+    "Repo has MIT license",
+    "README.md is professional",
+    "Page displays captcha URL passed at ?url=...",
+    "Page displays solved captcha text within 15 seconds"
+  ],
+  "evaluation_url": "http://example.com/notify",
+  "attachments": [
+    {
+      "name": "sample.png",
+      "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGNgYAAAAAMAASsJTYQAAAAASUVORK5CYII="
+    }
+  ]
+}

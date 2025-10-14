@@ -1,0 +1,7 @@
+---
+title: AutoMade2
+sdk: gradio
+app_file: app.py
+python_version: 3.10
+license: mit
+---

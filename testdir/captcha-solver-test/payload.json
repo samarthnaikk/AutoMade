@@ -1,0 +1,19 @@
+{
+  "attachments": [
+    {
+      "name": "sample.png",
+      "url": "data:image/png;base64,iVBORw0KGgo="
+    }
+  ],
+  "brief": "Create a captcha solver that handles ?url=/files/sample.png. Default to attached sample.",
+  "checks": [
+    "Repo has MIT license",
+    "README.md is professional"
+  ],
+  "email": "student@example.com",
+  "evaluation_url": "http://example.com/notify",
+  "nonce": "ab12-345",
+  "round": 1,
+  "secret": "s3cr3t",
+  "task": "captcha-solver-test"
+}

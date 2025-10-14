@@ -1,0 +1,33 @@
+<!doctype html>
++<html lang="en">
++  <head>
++    <meta charset="utf-8" />
++    <meta name="viewport" content="width=device-width,initial-scale=1" />
++    <title>Task View</title>
++  </head>
++  <body>
++    <h1>Task View</h1>
++    <p>Nonce: {{ payload.get('nonce') }}</p>
++    <div>
++      {% if img_url %}
++        <p>Image (from brief or attachment):</p>
++        <img src="{{ img_url }}" alt="captcha" style="max-width:90vw;max-height:60vh;" />
++      {% else %}
++        <p>No image provided.</p>
++      {% endif %}
++    </div>
++
++    <div>
++      <p>Solved text: <strong>{{ solved or '—' }}</strong></p>
++    </div>
++
++    <div>
++      <h3>Checks</h3>
++      <ul>
++        {% for c in payload.get('checks', []) %}
++          <li>{{ c }}</li>
++        {% endfor %}
++      </ul>
++    </div>
++  </body>
++</html>

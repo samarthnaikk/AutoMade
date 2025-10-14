@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "routes": [
+    { "src": "/task", "dest": "/api/task" },
+    { "src": "/files/(?<task>[^/]+)/(?<name>.+)", "dest": "/api/files" },
+    { "src": "/view/(?<task>.+)", "dest": "/view" }
+  ]
+}

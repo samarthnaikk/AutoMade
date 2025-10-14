@@ -1,0 +1,15 @@
+{
+  "email": "student@example.com",
+  "secret": "test-secret",
+  "task": "sample-app-task",
+  "round": 1,
+  "nonce": "sample-nonce-123",
+  "brief": "Create a sample web application with professional styling",
+  "checks": [
+    "Repo has MIT license",
+    "README.md is professional",
+    "Page displays content properly"
+  ],
+  "evaluation_url": "https://example.com/notify",
+  "attachments": []
+}
