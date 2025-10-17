@@ -283,8 +283,26 @@ Make it well-structured, professional, and include proper markdown formatting. F
         except Exception as e:
             print(f'Error generating files: {e}')
             return jsonify({'status': 'error', 'details': str(e)}), 500
+        
+        # Prepare response with repository links
+        repo_url = f'https://github.com/{repo_full_name}'
+        pages_url = f'https://{github_username}.github.io/{task_name}'
+        
         print('All tasks completed.')
-        return jsonify({'status': 'OK'}), 200
+        print(f'Repository: {repo_url}')
+        print(f'GitHub Pages: {pages_url}')
+        
+        return jsonify({
+            'status': 'OK',
+            'repository': {
+                'name': task_name,
+                'full_name': repo_full_name,
+                'url': repo_url,
+                'pages_url': pages_url
+            },
+            'round': round_num,
+            'files_created': list(created_files)
+        }), 200
     else:
         print('Unauthorized: secret mismatch.')
         return jsonify({'error': 'Unauthorized'}), 403
